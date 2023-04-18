@@ -54,9 +54,8 @@ app.get("/usuarios", function (req, res) {
 });
 
 // Puerto en el que se ejecutará el servidor
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Iniciar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
